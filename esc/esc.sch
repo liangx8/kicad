@@ -1,0 +1,199 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:sch_component
+LIBS:esc-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title "BLDC motor controler"
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 4200 1850 650  200 
+U 591A6F4C
+F0 "driver_nn_a" 60
+F1 "driver_nn_a.sch" 60
+F2 "AOUT" O R 4850 1950 60 
+F3 "AP" I L 4200 1900 60 
+F4 "AN" I L 4200 2000 60 
+$EndSheet
+Wire Wire Line
+	2800 3200 3800 3200
+Wire Wire Line
+	3800 3200 3800 1900
+Wire Wire Line
+	3800 1900 4200 1900
+Wire Wire Line
+	4200 2000 3850 2000
+Wire Wire Line
+	3850 2000 3850 3300
+Wire Wire Line
+	3850 3300 3200 3300
+$Comp
+L CONN_01X01 J5
+U 1 1 591A8D77
+P 5850 1950
+F 0 "J5" H 5850 2050 50  0000 C CNN
+F 1 "CONN_01X01" V 5950 1950 50  0000 C CNN
+F 2 "Connectors:1pin" H 5850 1950 50  0001 C CNN
+F 3 "" H 5850 1950 50  0001 C CNN
+	1    5850 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 1950 5650 1950
+$Comp
+L CONN_01X01 J2
+U 1 1 591AD9D2
+P 2600 2400
+F 0 "J2" H 2600 2500 50  0000 C CNN
+F 1 "CONN_01X01" V 2700 2400 50  0000 C CNN
+F 2 "Connectors:1pin" H 2600 2400 50  0001 C CNN
+F 3 "" H 2600 2400 50  0001 C CNN
+	1    2600 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X01 J4
+U 1 1 591ADAB8
+P 3000 3300
+F 0 "J4" H 3000 3400 50  0000 C CNN
+F 1 "CONN_01X01" V 3100 3300 50  0000 C CNN
+F 2 "Connectors:1pin" H 3000 3300 50  0001 C CNN
+F 3 "" H 3000 3300 50  0001 C CNN
+	1    3000 3300
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X01 J3
+U 1 1 591ADAE9
+P 2600 3200
+F 0 "J3" H 2600 3300 50  0000 C CNN
+F 1 "CONN_01X01" V 2700 3200 50  0000 C CNN
+F 2 "Connectors:1pin" H 2600 3200 50  0001 C CNN
+F 3 "" H 2600 3200 50  0001 C CNN
+	1    2600 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L VCC #PWR01
+U 1 1 591ADDD6
+P 2400 2000
+F 0 "#PWR01" H 2400 1850 50  0001 C CNN
+F 1 "VCC" H 2400 2150 50  0000 C CNN
+F 2 "" H 2400 2000 50  0001 C CNN
+F 3 "" H 2400 2000 50  0001 C CNN
+	1    2400 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 2000 2400 2400
+$Comp
+L CONN_01X01 J1
+U 1 1 591ADF9D
+P 1700 2800
+F 0 "J1" H 1700 2900 50  0000 C CNN
+F 1 "CONN_01X01" V 1800 2800 50  0000 C CNN
+F 2 "Connectors:1pin" H 1700 2800 50  0001 C CNN
+F 3 "" H 1700 2800 50  0001 C CNN
+	1    1700 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 591AE009
+P 1500 3000
+F 0 "#PWR02" H 1500 2750 50  0001 C CNN
+F 1 "GND" H 1500 2850 50  0000 C CNN
+F 2 "" H 1500 3000 50  0001 C CNN
+F 3 "" H 1500 3000 50  0001 C CNN
+	1    1500 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 2800 1500 3000
+$Comp
+L PWR_FLAG #FLG03
+U 1 1 591AE2E7
+P 1450 1900
+F 0 "#FLG03" H 1450 1975 50  0001 C CNN
+F 1 "PWR_FLAG" H 1450 2050 50  0000 C CNN
+F 2 "" H 1450 1900 50  0001 C CNN
+F 3 "" H 1450 1900 50  0001 C CNN
+	1    1450 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG04
+U 1 1 591AE31A
+P 1050 1900
+F 0 "#FLG04" H 1050 1975 50  0001 C CNN
+F 1 "PWR_FLAG" H 1050 2050 50  0000 C CNN
+F 2 "" H 1050 1900 50  0001 C CNN
+F 3 "" H 1050 1900 50  0001 C CNN
+	1    1050 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR05
+U 1 1 591AE346
+P 1450 2000
+F 0 "#PWR05" H 1450 1850 50  0001 C CNN
+F 1 "VCC" H 1450 2150 50  0000 C CNN
+F 2 "" H 1450 2000 50  0001 C CNN
+F 3 "" H 1450 2000 50  0001 C CNN
+	1    1450 2000
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR06
+U 1 1 591AE372
+P 1050 2000
+F 0 "#PWR06" H 1050 1750 50  0001 C CNN
+F 1 "GND" H 1050 1850 50  0000 C CNN
+F 2 "" H 1050 2000 50  0001 C CNN
+F 3 "" H 1050 2000 50  0001 C CNN
+	1    1050 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 1900 1450 2000
+Wire Wire Line
+	1050 1900 1050 2000
+$EndSCHEMATC
