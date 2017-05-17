@@ -34,8 +34,8 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 4
-Title "NN with driver a phase"
+Sheet 3 4
+Title "NN with driver b phase"
 Date ""
 Rev ""
 Comp ""
@@ -67,9 +67,9 @@ F 3 "" H 3000 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text HLabel 2950 2950 0    60   Input ~ 0
-AP
+BP
 Text HLabel 2950 3050 0    60   Input ~ 0
-AN
+BN
 $Comp
 L D D?
 U 1 1 591A744C
@@ -165,7 +165,7 @@ Wire Wire Line
 Connection ~ 5350 3650
 Connection ~ 5350 3750
 Text HLabel 6500 3300 2    60   Input ~ 0
-AOUT
+BOUT
 Connection ~ 5950 3300
 Connection ~ 5200 3050
 Connection ~ 4850 3050
