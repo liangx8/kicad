@@ -206,24 +206,6 @@ F 3 "" H 3500 850 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	3450 1050 3450 1300
-Wire Wire Line
-	3450 1300 3200 1300
-Wire Wire Line
-	3200 1300 3200 2150
-Wire Wire Line
-	3200 2150 3350 2150
-Wire Wire Line
-	3550 1050 3550 1350
-Wire Wire Line
-	3550 1350 3250 1350
-Wire Wire Line
-	3250 1350 3250 2050
-Wire Wire Line
-	3250 2050 3350 2050
-Wire Wire Line
-	3250 1250 3850 1250
-Wire Wire Line
 	3850 1250 3850 1750
 Wire Wire Line
 	3950 1200 3950 1750
@@ -354,12 +336,6 @@ Wire Wire Line
 Wire Wire Line
 	3050 1450 1850 1450
 Connection ~ 1850 1450
-Wire Wire Line
-	4950 1150 4950 1050
-Wire Wire Line
-	5050 1050 5050 1100
-Wire Wire Line
-	5050 1100 4500 1100
 Connection ~ 4500 1100
 $Comp
 L CONN_02X08 J6
@@ -599,7 +575,6 @@ F 3 "" H 5950 850 50  0001 C CNN
 	1    5950 850 
 	1    0    0    -1  
 $EndComp
-Connection ~ 4950 1150
 $Comp
 L +3.3V #PWR06
 U 1 1 591D3BEB
@@ -668,9 +643,30 @@ Wire Wire Line
 Wire Wire Line
 	3650 1150 3650 1050
 Wire Wire Line
-	3250 1250 3250 1050
+	3350 2150 3250 2150
 Wire Wire Line
-	3950 1200 3350 1200
+	3250 2150 3250 1050
 Wire Wire Line
-	3350 1200 3350 1050
+	3350 2050 3350 1050
+Wire Wire Line
+	3850 1250 3450 1250
+Wire Wire Line
+	3450 1250 3450 1050
+Wire Wire Line
+	3950 1200 3550 1200
+Wire Wire Line
+	3550 1200 3550 1050
+Text Label 2500 1750 1    60   ~ 0
+D-
+Text Label 2600 1850 1    60   ~ 0
+D+
+Text Label 2800 1700 1    60   ~ 0
+Vbus
+Wire Wire Line
+	4950 1050 4950 1100
+Wire Wire Line
+	4950 1100 4500 1100
+Wire Wire Line
+	5050 1050 5050 1150
+Connection ~ 5050 1150
 $EndSCHEMATC
