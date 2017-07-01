@@ -221,4 +221,8 @@ $EndComp
 Connection ~ 5950 2650
 Connection ~ 5950 2750
 Connection ~ 5950 2850
+Text Label 3100 2950 0    60   ~ 0
+AP
+Text Label 3100 3050 0    60   ~ 0
+AN
 $EndSCHEMATC
