@@ -264,7 +264,7 @@ U 1 1 591C11C2
 P 1350 3500
 F 0 "J3" H 1350 3750 50  0000 C CNN
 F 1 "C2 interface" V 1450 3500 50  0000 C CNN
-F 2 "Connectors:Grove_1x04" H 1350 3500 50  0001 C CNN
+F 2 "Connectors_Samtec:SL-104-X-XX_1x04" H 1350 3500 50  0001 C CNN
 F 3 "" H 1350 3500 50  0001 C CNN
 	1    1350 3500
 	-1   0    0    1   
@@ -611,7 +611,7 @@ U 1 1 591C3D56
 P 6450 1450
 F 0 "J4" H 6450 1650 50  0000 C CNN
 F 1 "RCP" V 6550 1450 50  0000 C CNN
-F 2 "Connectors:PINHEAD1-3" H 6450 1450 50  0001 C CNN
+F 2 "Connectors_Samtec:SL-103-X-XX_1x03" H 6450 1450 50  0001 C CNN
 F 3 "" H 6450 1450 50  0001 C CNN
 	1    6450 1450
 	0    1    1    0   
@@ -676,39 +676,54 @@ L C C1
 U 1 1 591C5FDC
 P 850 2600
 F 0 "C1" H 875 2700 50  0000 L CNN
-F 1 "4.7uF" H 875 2500 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 888 2450 50  0001 C CNN
+F 1 "5uF" H 875 2500 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 888 2450 50  0001 C CNN
 F 3 "" H 850 2600 50  0001 C CNN
 	1    850  2600
-	1    0    0    -1  
-$EndComp
-$Comp
-L C C2
-U 1 1 591C607B
-P 1300 2600
-F 0 "C2" H 1325 2700 50  0000 L CNN
-F 1 "0.1uF" H 1325 2500 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 1338 2450 50  0001 C CNN
-F 3 "" H 1300 2600 50  0001 C CNN
-	1    1300 2600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	850  2300 2800 2300
 Wire Wire Line
-	1300 2300 1300 2450
-Wire Wire Line
 	850  2450 850  2300
-Connection ~ 1300 2300
 Wire Wire Line
 	850  2750 850  2800
 Wire Wire Line
 	850  2800 2450 2800
 Connection ~ 2450 2800
-Wire Wire Line
-	1300 2750 1300 2800
-Connection ~ 1300 2800
 NoConn ~ 3400 1950
 NoConn ~ 3500 1950
 NoConn ~ 3600 1950
+Text Label 4200 2200 0    60   ~ 0
+AP
+Text Label 4250 2300 0    60   ~ 0
+AN
+Text Label 4150 2750 0    60   ~ 0
+BP
+Text Label 4150 2850 0    60   ~ 0
+BN
+Text Label 4050 3000 0    60   ~ 0
+CP
+Text Label 4000 3350 0    60   ~ 0
+CN
+Text Label 5700 2250 0    60   ~ 0
+AOUT
+Text Label 5600 2800 0    60   ~ 0
+BOUT
+Text Label 5550 3300 0    60   ~ 0
+COUT
+Text Label 3400 3900 0    60   ~ 0
+FB-
+Text Label 3600 3750 0    60   ~ 0
+C+
+Text Label 3700 3550 0    60   ~ 0
+B+
+Text Label 3700 1750 0    60   ~ 0
+A+
+Text Label 2800 1800 0    60   ~ 0
+RCP
+Text Label 2200 3350 0    60   ~ 0
+C2D
+Text Label 1650 3100 1    60   ~ 0
+C2CK
 $EndSCHEMATC

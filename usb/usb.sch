@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:usb-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -45,7 +46,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L C8051F320 U1
+L C8051F320-RESCUE-usb U1
 U 1 1 591CDCD9
 P 4100 2650
 F 0 "U1" H 3450 3400 60  0000 C CNN
