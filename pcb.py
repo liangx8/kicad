@@ -121,8 +121,8 @@ if __name__=="__main__":
     print("backup to `{}`".format(bn))
     shutil.copyfile(org,bn)
     pcb=PcbInfo(org)
-    #pcb.arrageItem()
-    pcb.defineEdge(100*unit,100*unit,150*unit,150*unit,int(0.15 * unit))
+    pcb.arrageItem()
+    pcb.defineEdge(20*unit,20*unit,110*unit,110*unit,int(0.15 * unit))
     # 手工运行
     #pcb.save()
     

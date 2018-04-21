@@ -1,7 +1,7 @@
 (kicad_pcb (version 4) (host pcbnew 4.0.7)
 
   (general
-    (links 130)
+    (links 0)
     (no_connects 6)
     (area 18.116667 19.277 77.075001 68.665)
     (thickness 1.6)
@@ -65,7 +65,7 @@
     (mod_edge_width 0.15)
     (mod_text_size 1 1)
     (mod_text_width 0.15)
-    (pad_size 1.2 1.2)
+    (pad_size 0.9 0.9)
     (pad_drill 0.8)
     (pad_to_mask_clearance 0.2)
     (aux_axis_origin 0 0)
