@@ -3,8 +3,8 @@
 FPZIP=kicad-footprints.zip
 FP_DIR=kicad-footprints-master
 # 下载最新的封装
-curl https://codeload.github.com/KiCad/kicad-footprints/zip/master -o /home/$USER/$FPZIP
-#curl --proxy socks5://127.0.0.1:1080 https://codeload.github.com/KiCad/kicad-footprints/zip/master -o /home/$USER/usr/kicad/$FPZIP
+#curl https://codeload.github.com/KiCad/kicad-footprints/zip/master -o /home/$USER/$FPZIP
+curl --proxy socks5://192.168.30.1:1080 https://codeload.github.com/KiCad/kicad-footprints/zip/master -o /home/$USER/usr/kicad/$FPZIP
 # 解压到指定目录
 cd /home/$USER/usr/kicad
 zip.py -x $FPZIP

@@ -1,0 +1,183 @@
+EESchema Schematic File Version 4
+LIBS:stm-esc-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L sch_component:IR2103 U5
+U 1 1 5B686A87
+P 5150 4200
+F 0 "U5" H 5150 4597 60  0000 C CNN
+F 1 "IR2103" H 5150 4491 60  0000 C CNN
+F 2 "footprint:SOIC-8" H 5150 4200 60  0001 C CNN
+F 3 "" H 5150 4200 60  0001 C CNN
+	1    5150 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR027
+U 1 1 5B686A8E
+P 6400 5000
+F 0 "#PWR027" H 6400 4750 50  0001 C CNN
+F 1 "GND" H 6405 4827 50  0000 C CNN
+F 2 "" H 6400 5000 50  0001 C CNN
+F 3 "" H 6400 5000 50  0001 C CNN
+	1    6400 5000
+	1    0    0    -1  
+$EndComp
+Text HLabel 8000 4250 2    50   Input ~ 0
+COUT
+$Comp
+L power:VCC #PWR026
+U 1 1 5B686A95
+P 6050 3200
+F 0 "#PWR026" H 6050 3050 50  0001 C CNN
+F 1 "VCC" H 6067 3373 50  0000 C CNN
+F 2 "" H 6050 3200 50  0001 C CNN
+F 3 "" H 6050 3200 50  0001 C CNN
+	1    6050 3200
+	1    0    0    -1  
+$EndComp
+Text HLabel 4100 4150 0    50   Input ~ 0
+CP
+Text HLabel 4100 4250 0    50   Input ~ 0
+CN
+$Comp
+L sch_component:nfet Q5
+U 1 1 5B686A9D
+P 7100 4550
+F 0 "Q5" V 7350 4550 50  0000 C CNN
+F 1 "nfet" V 7250 4550 50  0000 C CNN
+F 2 "footprint:SOIC-8" H 7100 4550 50  0001 C CNN
+F 3 "" H 7100 4550 50  0001 C CNN
+	1    7100 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 4250 7100 4250
+Wire Wire Line
+	6050 3950 6050 4250
+Wire Wire Line
+	5750 4250 6050 4250
+Connection ~ 6050 4250
+$Comp
+L Device:C C?
+U 1 1 5B686AA8
+P 6050 3800
+AR Path="/5B67FBD7/5B686AA8" Ref="C?"  Part="1" 
+AR Path="/5B686268/5B686AA8" Ref="C6"  Part="1" 
+F 0 "C6" H 6165 3846 50  0000 L CNN
+F 1 "Cc" H 6165 3755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6088 3650 50  0001 C CNN
+F 3 "~" H 6050 3800 50  0001 C CNN
+	1    6050 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5B686AAF
+P 6050 3400
+AR Path="/5B67FBD7/5B686AAF" Ref="D?"  Part="1" 
+AR Path="/5B686268/5B686AAF" Ref="D4"  Part="1" 
+F 0 "D4" V 6096 3321 50  0000 R CNN
+F 1 "Dc" V 6005 3321 50  0000 R CNN
+F 2 "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6050 3400 50  0001 C CNN
+F 3 "~" H 6050 3400 50  0001 C CNN
+	1    6050 3400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6050 3200 6050 3250
+Wire Wire Line
+	6050 3550 6050 3600
+Wire Wire Line
+	6050 3600 5750 3600
+Wire Wire Line
+	5750 3600 5750 4050
+Connection ~ 6050 3600
+Wire Wire Line
+	6050 3600 6050 3650
+Wire Wire Line
+	6400 4850 6400 5000
+Wire Wire Line
+	4100 4150 4550 4150
+Wire Wire Line
+	4100 4250 4550 4250
+Wire Wire Line
+	4550 4050 4550 3200
+Wire Wire Line
+	4550 3200 6050 3200
+Wire Wire Line
+	4550 4350 4550 4850
+Wire Wire Line
+	4550 4850 6400 4850
+Connection ~ 6400 4850
+$Comp
+L sch_component:nfet Q4
+U 1 1 5B686AC6
+P 7100 4000
+F 0 "Q4" V 7350 4000 50  0000 C CNN
+F 1 "nfet" V 7250 4000 50  0000 C CNN
+F 2 "footprint:SOIC-8" H 7100 4000 50  0001 C CNN
+F 3 "" H 7100 4000 50  0001 C CNN
+	1    7100 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 3200 6050 3200
+Wire Wire Line
+	7100 3200 7100 3800
+Wire Wire Line
+	7100 4200 7100 4250
+Connection ~ 7100 4250
+Wire Wire Line
+	7100 4250 7650 4250
+Wire Wire Line
+	7100 4250 7100 4350
+Wire Wire Line
+	7100 4850 7100 4750
+Wire Wire Line
+	6400 4850 7100 4850
+Connection ~ 6050 3200
+Wire Wire Line
+	5750 4350 5800 4350
+Wire Wire Line
+	5800 4350 5800 4550
+Wire Wire Line
+	5800 4550 6800 4550
+$Comp
+L Connector_Generic:Conn_01x01 J?
+U 1 1 5BCDC3D7
+P 7850 3850
+AR Path="/5B67FBD7/5BCDC3D7" Ref="J?"  Part="1" 
+AR Path="/5B686268/5BCDC3D7" Ref="J15"  Part="1" 
+F 0 "J15" H 7930 3892 50  0000 L CNN
+F 1 "Conn_01x01" H 7930 3801 50  0000 L CNN
+F 2 "footprint:HOLE-R1.5MM" H 7850 3850 50  0001 C CNN
+F 3 "~" H 7850 3850 50  0001 C CNN
+	1    7850 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 3850 7650 4250
+Connection ~ 7650 4250
+Wire Wire Line
+	7650 4250 8000 4250
+Wire Wire Line
+	6150 4150 6150 4000
+Wire Wire Line
+	5750 4150 6150 4150
+Wire Wire Line
+	6150 4000 6800 4000
+$EndSCHEMATC

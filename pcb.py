@@ -115,8 +115,8 @@ def via(item):
     print item
 
 if __name__=="__main__":
+    #org='/home/arm/git/kicad/timer/timer.kicad_pcb'
     org='/home/arm/git/kicad/stm-esc/stm-esc.kicad_pcb'
-    #org='/home/arm/git/kicad/esc/esc.kicad_pcb'
     bn=bakname(org,"/home/arm/git/kicad/backup")
     print("backup to `{}`".format(bn))
     shutil.copyfile(org,bn)
