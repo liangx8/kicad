@@ -881,8 +881,6 @@ Entry Wire Line
 Entry Wire Line
 	800  4600 900  4500
 Entry Wire Line
-	800  4550 900  4450
-Entry Wire Line
 	800  4500 900  4400
 Entry Wire Line
 	800  4450 900  4350
@@ -908,12 +906,6 @@ Wire Wire Line
 	1350 4350 1350 4500
 Wire Wire Line
 	1350 4500 900  4500
-Wire Wire Line
-	1500 4250 1300 4250
-Wire Wire Line
-	1300 4250 1300 4450
-Wire Wire Line
-	1300 4450 900  4450
 Wire Wire Line
 	1500 4150 1250 4150
 Wire Wire Line
@@ -981,9 +973,9 @@ Wire Wire Line
 Wire Wire Line
 	1250 2850 900  2850
 Entry Wire Line
-	800  2550 900  2450
-Entry Wire Line
 	800  2600 900  2500
+Entry Wire Line
+	800  2650 900  2550
 Wire Wire Line
 	1500 2250 950  2250
 Wire Wire Line
@@ -997,13 +989,7 @@ Wire Wire Line
 Wire Wire Line
 	1000 2400 900  2400
 Wire Wire Line
-	1500 2450 900  2450
-Wire Wire Line
-	1000 2550 1000 2500
-Wire Wire Line
-	1000 2500 900  2500
-Wire Wire Line
-	1000 2550 1500 2550
+	1500 2450 1000 2450
 Entry Wire Line
 	3100 5700 3200 5800
 Entry Wire Line
@@ -1144,8 +1130,6 @@ Text Label 1100 4550 0    50   ~ 0
 PB13
 Text Label 1200 4500 0    50   ~ 0
 PB12
-Text Label 1100 4450 0    50   ~ 0
-PB11
 Text Label 950  4400 0    50   ~ 0
 PB10
 Text Label 1250 4050 0    50   ~ 0
@@ -1174,49 +1158,49 @@ Text Label 1250 2350 0    50   ~ 0
 PF1
 Text Label 1250 2250 0    50   ~ 0
 PF0
-Text Label 3450 6250 0    50   ~ 0
-PA3
-Text Label 3450 6350 0    50   ~ 0
-PA11
-Text Label 3450 6450 0    50   ~ 0
-PA12
-Text Label 3450 6550 0    50   ~ 0
-PB15
-Text Label 3450 6650 0    50   ~ 0
-PB14
-Text Label 3450 6800 0    50   ~ 0
-PB13
-Text Label 3450 6900 0    50   ~ 0
-PB12
-Text Label 3450 7000 0    50   ~ 0
-PB11
-Text Label 3450 7100 0    50   ~ 0
-PB10
-Text Label 3450 7200 0    50   ~ 0
-PB9
-Text Label 3450 7300 0    50   ~ 0
-PB8
-Text Label 1700 6100 0    50   ~ 0
-PB5
-Text Label 1700 6200 0    50   ~ 0
-PB4
-Text Label 1700 6300 0    50   ~ 0
-PB3
-Text Label 1700 6400 0    50   ~ 0
-PB2
-Text Label 1650 6500 0    50   ~ 0
-PC15
 Text Label 1650 6600 0    50   ~ 0
-PC14
+PA3
 Text Label 1650 6800 0    50   ~ 0
-PC13
+PA11
+Text Label 1650 6100 0    50   ~ 0
+PA12
 Text Label 1650 6900 0    50   ~ 0
-PF7
+PB15
 Text Label 1650 7000 0    50   ~ 0
-PF6
+PB14
 Text Label 1650 7100 0    50   ~ 0
-PF1
+PB13
 Text Label 1650 7200 0    50   ~ 0
+PB12
+Text Label 1650 6500 0    50   ~ 0
+PA2
+Text Label 1650 6300 0    50   ~ 0
+PB10
+Text Label 3450 6900 0    50   ~ 0
+PB9
+Text Label 3450 6800 0    50   ~ 0
+PB8
+Text Label 3450 6250 0    50   ~ 0
+PB5
+Text Label 3450 7000 0    50   ~ 0
+PB4
+Text Label 3450 6350 0    50   ~ 0
+PB3
+Text Label 1650 6400 0    50   ~ 0
+PB2
+Text Label 3450 7200 0    50   ~ 0
+PC15
+Text Label 3450 6550 0    50   ~ 0
+PC14
+Text Label 3450 7100 0    50   ~ 0
+PC13
+Text Label 3450 6450 0    50   ~ 0
+PF7
+Text Label 1650 6200 0    50   ~ 0
+PF6
+Text Label 3450 7300 0    50   ~ 0
+PF1
+Text Label 3450 6650 0    50   ~ 0
 PF0
 $Comp
 L power:GND #PWR05
@@ -1480,9 +1464,7 @@ $EndComp
 Wire Wire Line
 	3600 2500 3600 2700
 Wire Wire Line
-	3600 3000 3600 3350
-Wire Wire Line
-	3600 3350 2700 3350
+	3600 3000 3600 3150
 $Comp
 L power:GND #PWR09
 U 1 1 5BEA971C
@@ -1540,10 +1522,10 @@ Connection ~ 2300 1250
 Wire Wire Line
 	2300 1250 2300 1650
 $Comp
-L power:+3.3V #PWR?
+L power:+3.3V #PWR0101
 U 1 1 5BE14ECF
 P 2300 700
-F 0 "#PWR?" H 2300 550 50  0001 C CNN
+F 0 "#PWR0101" H 2300 550 50  0001 C CNN
 F 1 "+3.3V" H 2315 873 50  0000 C CNN
 F 2 "" H 2300 700 50  0001 C CNN
 F 3 "" H 2300 700 50  0001 C CNN
@@ -1558,6 +1540,24 @@ Wire Wire Line
 	3300 750  3300 1250
 Wire Wire Line
 	2300 750  2300 700 
+Text Label 3600 3100 0    50   ~ 0
+LED
+Wire Wire Line
+	1500 4250 1300 4250
+Text Label 1300 4250 0    50   ~ 0
+LED
+Entry Wire Line
+	3800 3350 3900 3250
+Wire Wire Line
+	2700 3350 3800 3350
+Text Label 2750 3350 0    50   ~ 0
+PA2
+Wire Wire Line
+	900  2550 1500 2550
+Wire Wire Line
+	1000 2450 1000 2500
+Wire Wire Line
+	1000 2500 900  2500
 Wire Bus Line
 	3900 3100 3900 5700
 Wire Bus Line
