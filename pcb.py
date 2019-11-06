@@ -108,15 +108,15 @@ def boardInfo(pcb):
             pos = item.GetPosition()
             drill = item.GetDrillValue()
             width = item.GetWidth()
-            print "Via: {} * {:f}/{:f}".format(ToUnits(pos),ToUnits(drill),ToUnits(width))
+            print ("Via: {} * {:f}/{:f}".format(ToUnits(pos),ToUnits(drill),ToUnits(width)))
     
 
 def via(item):
-    print item
+    print (item)
 
 if __name__=="__main__":
     #org='/home/arm/git/kicad/timer/timer.kicad_pcb'
-    org='/home/arm/git/kicad/stm-esc/stm-esc.kicad_pcb'
+    org='/home/arm/git/pcb_esc/stm-esc.kicad_pcb'
     bn=bakname(org,"/home/arm/git/kicad/backup")
     print("backup to `{}`".format(bn))
     shutil.copyfile(org,bn)
