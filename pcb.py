@@ -116,13 +116,13 @@ def via(item):
 
 if __name__=="__main__":
     #org='/home/arm/git/kicad/timer/timer.kicad_pcb'
-    org='/home/arm/git/pcb_esc/stm-esc.kicad_pcb'
+    org='/home/arm/git/pcb_esc/esc/esc.kicad_pcb'
     bn=bakname(org,"/home/arm/git/kicad/backup")
     print("backup to `{}`".format(bn))
     shutil.copyfile(org,bn)
     pcb=PcbInfo(org)
     pcb.arrageItem()
-    pcb.defineEdge(20*unit,20*unit,110*unit,110*unit,int(0.15 * unit))
+    #pcb.defineEdge(20*unit,20*unit,110*unit,110*unit,int(0.15 * unit))
     # 手工运行
     #pcb.save()
     
