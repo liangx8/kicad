@@ -11,6 +11,7 @@ import os.path
 import os
 import fnmatch
 
+import datetime
 
 ToUnits=pcbnew.ToMM
 
@@ -32,6 +33,41 @@ class PcbInfo:
                     cb(item)
             else:
                 cb(item)
+    def zones(self):
+        """ GetCornerPosition(idx)
+            GetNumsCorners()
+            SetCornerPosition(idx,pcbnew.wxPoint(x,y))
+"""
+        for idx in range(self.__pcb.GetAreaCount()):
+            self.zone(self.__pcb.GetArea(idx))
+    def most_item(self,cb):
+        self.allTracks(cb,None)
+        for idx in range(self.__pcb.GetAreaCount()):
+            cb(self.__pcb.GetArea(idx))
+        for m in self.__pcb.GetModules():
+            cb(m)
+    def zone(self,zz):
+        nc=zz.GetNumCorners()
+        
+        lx=[]
+        ly=[]
+        if nc==4:
+            print(zz.GetNetname())
+            for idx in range(4):
+                pts=zz.GetCornerPosition(idx)
+                lx.append(pts.x)
+                ly.append(pts.y)
+            
+            x1=min(lx)
+            y1=min(ly)
+            x2=max(lx)
+            y2=max(ly)
+            zz.SetCornerPosition(0,pcbnew.wxPoint(x1,y1))
+            zz.SetCornerPosition(1,pcbnew.wxPoint(x1,y2))
+            zz.SetCornerPosition(2,pcbnew.wxPoint(x2,y2))
+            zz.SetCornerPosition(3,pcbnew.wxPoint(x2,y1))
+            
+            
     def arrageItem(self):
         pcb = self.__pcb
         ms = pcb.GetModules()
@@ -113,11 +149,19 @@ def boardInfo(pcb):
 
 def via(item):
     print (item)
-def GetZone(pcb):
-    for idx in range(pcb.GetAreaCount()):
-        ar=pcb.GetArea(idx)
-        print(ar.GetNetname())
-
+def zone(bn):
+    bd=pcbnew.LoadBoard(bn)
+    for idx in range(bd.GetAreaCount()):
+        ar=bd.GetArea(idx)
+        print("netname:\t",ar.GetNetname())
+        print("timestamp:\t{:x}".format(ar.GetTimeStamp()))
+def ts(cm):
+    
+    #if hasattr(cm,"GetTimeStamp"):
+    print("{:x}".format(cm.GetTimeStamp()))
+    t=cm.GetTimeStamp()
+    if t==0:
+        cm.SetTimeStamp(int(datetime.datetime.now().timestamp()))
 if __name__=="__main__":
     #org='/home/arm/git/kicad/timer/timer.kicad_pcb'
     org='/home/arm/git/pcb_esc/esc/esc.kicad_pcb'
@@ -125,8 +169,12 @@ if __name__=="__main__":
     print("backup to `{}`".format(bn))
     shutil.copyfile(org,bn)
     pcb=PcbInfo(org)
+    pcb.zones()
+    #zone(org)
+    #pcb.most_item(ts)
+
     #pcb.arrageItem()
-    pcb.defineEdge(40*unit,20*unit,110*unit,110*unit,int(0.15 * unit))
+    #pcb.defineEdge(30*unit,30*unit,100*unit,120*unit,int(0.15 * unit))
     # 手工运行
-    #pcb.save()
+    pcb.save()
     
