@@ -164,17 +164,17 @@ def ts(cm):
         cm.SetTimeStamp(int(datetime.datetime.now().timestamp()))
 if __name__=="__main__":
     #org='/home/arm/git/kicad/timer/timer.kicad_pcb'
-    org='/home/arm/git/pcb_esc/esc/esc.kicad_pcb'
+    org='/home/arm/git/pcb_esc/m48/m48.kicad_pcb'
     bn=bakname(org,"/home/arm/git/kicad/backup")
     print("backup to `{}`".format(bn))
     shutil.copyfile(org,bn)
     pcb=PcbInfo(org)
-    pcb.zones()
+    #pcb.zones()
     #zone(org)
-    #pcb.most_item(ts)
+    #pcb.most_item(via)
 
     #pcb.arrageItem()
     #pcb.defineEdge(30*unit,30*unit,100*unit,120*unit,int(0.15 * unit))
     # 手工运行
-    pcb.save()
+    #pcb.save()
     
