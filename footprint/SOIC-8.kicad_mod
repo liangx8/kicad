@@ -16,7 +16,7 @@
   (pad 7 smd rect (at 2.477932 -0.632486 90) (size 0.72 1.78) (layers F.Cu F.Paste F.Mask))
   (pad 1 smd rect (at -2.522068 -1.902486 90) (size 0.72 1.78) (layers F.Cu F.Paste F.Mask))
   (pad 8 smd rect (at 2.477932 -1.902486 90) (size 0.72 1.78) (layers F.Cu F.Paste F.Mask))
-  (model ${KISYS3DMOD}/Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.wrl
+  (model ${KICAD6_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.wrl
     (at (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
