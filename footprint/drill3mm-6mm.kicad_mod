@@ -1,0 +1,13 @@
+(footprint "drill3mm-6mm" (version 20221018) (generator pcbnew)
+  (layer "F.Cu")
+  (attr through_hole)
+  (fp_text reference "REF**" (at 0 0.5) (layer "F.SilkS") hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 3d9e90d0-4e68-46b5-92a6-47fab87a8672)
+  )
+  (fp_text value "drill3mm-6mm" (at 0 -0.5) (layer "F.Fab") hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 8ab2650f-84c1-4d4c-80e9-22b11e29795c)
+  )
+  (pad "1" thru_hole circle (at 0 0) (size 6 6) (drill 3) (layers "*.Cu" "*.Mask") (tstamp dead8e80-3e0e-4c1f-a2d8-482fd89d94ce))
+)

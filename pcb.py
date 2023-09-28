@@ -8,7 +8,6 @@
 
 
 import pcbnew
-import shutil
 import os.path
 import os
 import fnmatch
@@ -33,24 +32,41 @@ class PcbInfo:
         for i in range(numlayers):
             name=self.__pcb.GetLayerName(i)
             print("{} {}".format(i,name))
-        
-def bakname(org,bakdir):
-    bname=os.path.basename(org)
-    match="{}*".format(bname)
-    ext=list()
-    for file in os.listdir(bakdir):
-        if fnmatch.fnmatch(file,match):
-            extnum=file[len(file)-3:]
-            if extnum.isdigit():
-                ext.append(int(extnum))
-    if len(ext) == 0:
-        return "{}/{}.001".format(bakdir,bname)
-    return "{}/{}.{:03}".format(bakdir,bname,max(ext)+1)
+
+def showbox2(bx):
+    print("left,right,top,bottom:",bx.GetLeft(),bx.GetRight(),bx.GetTop(),bx.GetBottom())
+    print("X,Y,Width,Height",bx.GetX(),bx.GetY(),bx.GetWidth(),bx.GetHeight())
+    print("position,origin",bx.GetPosition(),bx.GetOrigin())
+    print("format",bx.Format())
+    print("end",bx.GetEnd())
+def corner(zn):
+    cnt=zn.GetNumCorners()
+    for idx in range(cnt):
+        print(idx,zn.GetCornerPosition(idx))
+holderplace=10
+def area(brd):
+    change=False
+    print(brd.GetAreaCount())
+    for idx in range(brd.GetAreaCount()):
+        zn=brd.GetArea(idx)
+        name=zn.GetZoneName()
+        if name == "":
+            name="ZONE{:03}".format(idx)
+            zn.SetZoneName(name)
+            change=True
+        ln=len(name)
+        rem=holderplace-ln-1
+        print(name," "*rem,"|","-"*(60-holderplace))
+
+        showbox2(zn.GetBoundingBox())
+        corner(zn)
+    return change
+
+
 if __name__=="__main__":
     #org='/home/arm/git/kicad/timer/timer.kicad_pcb'
-    org='/home/arm/git/pcb_esc/8051/8051.kicad_pcb'
-    bn=bakname(org,"/home/arm/git/kicad/backup")
-    print("backup to `{}`".format(bn))
-    shutil.copyfile(org,bn)
-    pcb=PcbInfo(org)
-    pcb.layer()
+    org='/home/tec/git/pcb_esc/stc/stc.kicad_pcb'
+    bd=pcbnew.LoadBoard(org)
+    if area(bd):
+        print("file changed!")
+        bd.Save(org)
