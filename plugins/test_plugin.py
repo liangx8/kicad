@@ -58,12 +58,12 @@ class TestPlugin(pcbnew.ActionPlugin):
         for idx in range(aacnt):
             aa=brd.GetArea(idx)
             name=aa.GetZoneName()
-            if name == "":
+            if name == "" or name[:4] == 'ZONE':
                 aa.SetZoneName("ZONE{:03}".format(idx))
             if aa.IsSelected() :
                 rebox(aa)
 
 
-
-
-TestPlugin().register()
+ver=pcbnew.Version()
+if ver[0] == '7':
+    TestPlugin().register()
